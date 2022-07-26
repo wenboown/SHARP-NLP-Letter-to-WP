@@ -71,7 +71,7 @@ Metrics
 -----------------
 
 Acoustic features: Based on the literature as well as our previous work
-on the characterization of CHR subjects\ :sup:`1,2,3,4`, we extracted
+on the characterization of CHR subjects [1]_ [2]_ [3]_ [4]_, we extracted
 several features that can capture flattened intonation, disturbed flow
 of speech (e.g., voice break), changes in speech rate and other
 characteristics found in studies that characterize speech in
@@ -81,7 +81,7 @@ grouped all the extracted features in 8 categories: pitch variations,
 changes in rhythm, voice stability, spectral characterization, vowel
 space, MFCCs, chroma features, and noise measurements (see Table 2).
 More information about the processing used to compute these features can
-be found here\ :sup:`4-6`.
+be found here [4]_ [5]_ [6]_.
 
 English-based linguistic features: To perform a thorough
 characterization of the content of the subject’s speech, we extracted
@@ -90,9 +90,9 @@ prepared the text to be analyzed by tokenizing and lemmatizing it using
 the NLTK library\ :sup:`16`. In addition, we only kept the content words
 of the text by removing the stop words (e.g., “then”) from our analysis,
 using the provided list from natural language toolkit library in python
-(NLTK):sup:`7`.
+(NLTK) [7]_.
 
-At the word level, we used part of speech (PoS) tagging\ :sup:`8` to
+At the word level, we used part of speech (PoS) tagging [8]_ to
 obtain the normalized frequency (percentage) of different parts of
 speech such as adjectives, verbs, etc. used by the subject during the
 interview (see Table 2). We also quantified content and unique words
@@ -103,8 +103,8 @@ categories: graph-based and speech coherence. For graph-based features,
 each word (previously lemmatized) becomes a graph node while consecutive
 words (two nodes) are connected using edges. From that graphical
 representation of the text, we computed standard mathematical graph
-properties listed in\ :sup:`9` and summarized in Table 2. To quantify
-speech coherence, we used the Universal Sentence Encoder\ :sup:`10` text
+properties listed in [9]_ and summarized in Table 2. To quantify
+speech coherence, we used the Universal Sentence Encoder [10]_ text
 embedding, an algorithm trained by Google with a deep averaging network
 encoder, that numerically represents each text (word, sentence,
 paragraph) using 512 dimensions. Once each sentence is vectorized,
@@ -120,7 +120,7 @@ number of switches).
 
 Finally, for the analysis at a paragraph level, the whole content of the
 subject speech was used to perform sentiment analysis using Watson
-Natural Language Understanding API\ :sup:`11`. This tool provides the
+Natural Language Understanding API [11]_. This tool provides the
 following metrics: overall sentiment (positive, negative), as well as
 scores for specific sentiments (i.e., anger, disgust, fear, joy, and
 sadness).
@@ -132,15 +132,15 @@ with the following variations in the text processing. To perform
 tokenization in Mandarin, we need to consider that this language is
 written without spacing. Therefore, we used the Electra base version of
 NLP features trained on the close-source Chinese corpus via HanLP 2.1
-library\ :sup:`12`. By using this library, we obtained the tokenized
-words and POS tagging based on the Penn Chinese Treebank (3.0):sup:`13`.
+library [12]_. By using this library, we obtained the tokenized
+words and POS tagging based on the Penn Chinese Treebank (3.0) [13]_.
 Unlike English, Mandarin does not require lemmatization. Specific to
 Mandarin, POS features included other categories besides the ones
 reported for English, including localizers, associative/possessive, and
 measure words, among others. Also, wh-words are not included among POS
 tags in Mandarin.
 
-For coherence features, we used Sentence Transformers\ :sup:`14` to
+For coherence features, we used Sentence Transformers [14]_ to
 obtain the sentence embedding. The consequent steps are a bit different
 from English. For Q-A coherence, the cosine similarity is computed
 between the question and the first sentence in the answer paragraph. For
@@ -413,40 +413,62 @@ model (Linear Regression).
 References:
 **************
 
-    1. Bernardini, F. *et al.* Associations of acoustically measured tongue/jaw movements and portion of time
+.. [1] Bernardini, F. *et al.* Associations of acoustically measured tongue/jaw movements and portion of time
     speaking with negative symptom severity in patients with schizophrenia in Italy and the United States. *Psychiatry
     Res.* **239**, 253–258 (2016).
 
-    2. Covington, M. A. *et al.*
+.. [2] Covington, M. A. *et al.*
     Phonetic measures of reduced tongue movement correlate with negative
     symptom severity in hospitalized patients with first-episode
     schizophrenia-spectrum disorders. *Schizophr. Res.* **142**, 93–95
     (2012).
 
-3. Zhang, J., Pan Z., Gui, C., Zhu, J. & Cui, D. Clinical
-investigation of speech signal features among patients with
-schizophrenia. *Shanghai Arch. Psychiatry* **28**, 95–102.4. Agurto, C.
-*et al.* Analyzing acoustic and prosodic fluctuations in free speech to
-predict psychosis onset in high-risk youths. in *2020 42nd Annual
-International Conference of the IEEE Engineering in Medicine & Biology
-Society (EMBC)* 5575–5579 (IEEE, 2020).5. Praat Vocal Toolkit: Cut
-pauses. http://www.praatvocaltoolkit.com/cut-pauses.html.6.
-Giannakopoulos, T. pyAudioAnalysis: An Open-Source Python Library for
-Audio Signal Analysis. *PLOS ONE* **10**, e0144610 (2015).7. NLTK::
-Natural Language Toolkit. https://www.nltk.org/.8. Santorini, B.
-Part-of-Speech Tagging Guidelines for the Penn Treebank Project (3rd
-Revision). 37 (1990).9. Mota, N. B. *et al.* Speech graphs provide a
-quantitative measure of thought disorder in psychosis. *PloS One* **7**,
-e34928 (2012).10. Cer, D. *et al.* Universal Sentence Encoder.
-*ArXiv180311175 Cs* (2018).11. IBM Watson Natural Language Understanding
-- Features.
-https://www.ibm.com/cloud/watson-natural-language-understanding/details
-(2021).12. mtl — HanLP Documentation.
-https://hanlp.hankcs.com/docs/api/hanlp/pretrained/mtl.html.13. Xia, F.
-The Part-Of-Speech Tagging Guidelines for the Penn Chinese Treebank
-(3.0). *IRCS Tech. Rep. Ser.* (2000).14. Pretrained Models —
-Sentence-Transformers documentation.
-https://www.sbert.net/docs/pretrained_models.html#multi-lingual-models.
+.. [3] Zhang, J., Pan Z., Gui, C., Zhu, J. & Cui, D. Clinical
+    investigation of speech signal features among patients with
+    schizophrenia. *Shanghai Arch. Psychiatry* **28**, 95–102.
+
+.. [4] Agurto, C.
+    *et al.* Analyzing acoustic and prosodic fluctuations in free speech to
+    predict psychosis onset in high-risk youths. in *2020 42nd Annual
+    International Conference of the IEEE Engineering in Medicine & Biology
+    Society (EMBC)* 5575–5579 (IEEE, 2020).
+
+.. [5] Praat Vocal Toolkit: Cut
+    pauses. http://www.praatvocaltoolkit.com/cut-pauses.html.
+
+.. [6]
+    Giannakopoulos, T. pyAudioAnalysis: An Open-Source Python Library for
+    Audio Signal Analysis. *PLOS ONE* **10**, e0144610 (2015).
+
+.. [7] NLTK::
+    Natural Language Toolkit. https://www.nltk.org/.
+
+.. [8] Santorini, B.
+    Part-of-Speech Tagging Guidelines for the Penn Treebank Project (3rd
+    Revision). 37 (1990).
+
+.. [9] Mota, N. B. *et al.* Speech graphs provide a
+    quantitative measure of thought disorder in psychosis. *PloS One* **7**,
+    e34928 (2012).
+
+.. [10] Cer, D. *et al.* Universal Sentence Encoder.
+    *ArXiv180311175 Cs* (2018).
+
+.. [11] IBM Watson Natural Language Understanding
+    - Features.
+    https://www.ibm.com/cloud/watson-natural-language-understanding/details
+    (2021).
+
+.. [12] mtl — HanLP Documentation.
+    https://hanlp.hankcs.com/docs/api/hanlp/pretrained/mtl.html.
+
+.. [13] Xia, F.
+    The Part-Of-Speech Tagging Guidelines for the Penn Chinese Treebank
+    (3.0). *IRCS Tech. Rep. Ser.* (2000).
+
+.. [14] Pretrained Models —
+    Sentence-Transformers documentation.
+    https://www.sbert.net/docs/pretrained_models.html#multi-lingual-models.
 
 .. |fig1| image:: figs/fig1.png
    :width: 6.32407in
