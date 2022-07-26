@@ -6,7 +6,7 @@
                             *spoken language in Mandarin-speaking youths at clinical high risk for psychosis,* by Agurto et al.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
 
@@ -18,9 +18,9 @@ M. Corcoran, William S. stone.
 
 In press, World Psychiatry
 
-============
+**************
 Subjects
-============
+**************
 
 Supplementary Table 1. Demographics and clinical variables of the
 cohorts.
@@ -29,8 +29,8 @@ cohorts.
 |             | Category    | CHR         | Healthy     | Statistics  |
 |             |             |             | Controls    |             |
 +=============+=============+=============+=============+=============+
-| Demographic | Sex         | 20 (11      | 25 (12      | Chi-Square: |
-| s           |             | females)    | females)    | 0.22,       |
+| Demographics| Sex         | 20 (11      | 25 (12      | Chi-Square: |
+|             |             | females)    | females)    | 0.22,       |
 |             |             |             |             | p=0.64      |
 +-------------+-------------+-------------+-------------+-------------+
 |             | Age         | 19.6 +/-    | 24.9 +/-    | KS-test:    |
@@ -51,11 +51,11 @@ cohorts.
 |             | Symptoms    |             |             |             |
 +-------------+-------------+-------------+-------------+-------------+
 
-========================
+****************************
 Supplementary Methods
-========================
+****************************
 
------------------
+
 Preprocessing
 -----------------
 
@@ -66,7 +66,7 @@ contained the timestamps that indicate when the subject is speaking, we
 used that information to segment the recording and then join only
 subject’s segments to generate a new audio file.
 
------------------
+
 Metrics
 -----------------
 
@@ -297,11 +297,11 @@ features in the best models was performed. All statistical measurements
 used in this study considered the non-normal distribution of the
 analyzed variables.
 
-================================
+****************************
 Supplementary Results
-================================
+****************************
 
---------------------------------------------------
+
 Classification between CHR v. HC
 --------------------------------------------------
 
@@ -376,7 +376,7 @@ correlation between both types of features, b) Comparison between both
 types of features of coherence Q-A (robust minimum), and c) Comparison
 between predicative-adjective and adjective.
 
----------------------------------------------------------------------------
+
 Inference of SIPS/SOPS positive and negative symptom scores.
 ---------------------------------------------------------------------------
 
@@ -409,9 +409,9 @@ by age and education years so values are also shifted to negative
 values. c) Top features to infer negative symptoms used in the best
 model (Linear Regression).
 
-==============
+
 References:
-==============
+**************
 
     1. Bernardini, F. *et al.* Associations of acoustically measured tongue/jaw movements and portion of time
     speaking with negative symptom severity in patients with schizophrenia in Italy and the United States. *Psychiatry
