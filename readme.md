@@ -5,6 +5,18 @@ This is written with Sphinx.
 To view the generated docs: 
 https://wenboown.github.io/SHARP-NLP-Letter-to-WP/
 
+Install `pandoc`:
+```shell
+ brew install pandoc
+```
+
+Use `pandoc` to convert docx file to rst file:
+```shell
+pandoc input.docx -f docx -t rst -o output.rst
+```
+
+Then review the output format and make changes accordingly.
+
 To update the content in Github page:
 ```bash
 make github

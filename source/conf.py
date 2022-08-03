@@ -19,11 +19,7 @@ import sphinx_rtd_theme
 
 project = 'SUPPLEMENTARY MATERIAL: Are language deficits associated with psychosis risk universal? Automated analyses of spoken language in Mandarin-speaking youths at clinical high risk for psychosis, by Agurto et al.'
 copyright = '2022 IBM, Bo Wen'
-author = """Carla Agurto, Raquel Norel, Bo Wen, Yanyan Wei, Dan Zhang, Zarina
-Bilgrami, Xiaolu His, Tianhong Zhang, Ofer Pasternak, Huijun Li,
-Matcheri Keshavan, Larry J. Seidman, Susan Whitfield-Gabrieli, Martha E.
-Shenton, Margaret A. Niznikiewicz, Jijun Wang, Guillermo Cecchi, Cheryl
-M. Corcoran, William S. stone."""
+author = """Carla Agurto, Raquel Norel, Bo Wen, Yanyan Wei, Dan Zhang, Zarina Bilgrami, Xiaolu Hsi, Tianhong Zhang, Ofer Pasternak, Huijun Li, Matcheri Keshavan, Larry J. Seidman, Susan Whitfield-Gabrieli, Martha E. Shenton, Margaret A. Niznikiewicz, Jijun Wang, Guillermo Cecchi, Cheryl M. Corcoran, William S. stone."""
 
 
 # -- General configuration ---------------------------------------------------

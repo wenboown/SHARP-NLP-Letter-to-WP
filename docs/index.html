@@ -174,11 +174,7 @@
 <em>spoken language in Mandarin-speaking youths at clinical high risk for psychosis,</em> by Agurto et al.<a class="headerlink" href="#supplementary-material-long-title" title="Permalink to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<p>Carla Agurto, Raquel Norel, Bo Wen, Yanyan Wei, Dan Zhang, Zarina
-Bilgrami, Xiaolu His, Tianhong Zhang, Ofer Pasternak, Huijun Li,
-Matcheri Keshavan, Larry J. Seidman, Susan Whitfield-Gabrieli, Martha E.
-Shenton, Margaret A. Niznikiewicz, Jijun Wang, Guillermo Cecchi, Cheryl
-M. Corcoran, William S. stone.</p>
+<p>Carla Agurto, Raquel Norel, Bo Wen, Yanyan Wei, Dan Zhang, Zarina Bilgrami, Xiaolu Hsi, Tianhong Zhang, Ofer Pasternak, Huijun Li, Matcheri Keshavan, Larry J. Seidman, Susan Whitfield-Gabrieli, Martha E. Shenton, Margaret A. Niznikiewicz, Jijun Wang, Guillermo Cecchi, Cheryl M. Corcoran, William S. stone.</p>
 <p>In press, World Psychiatry</p>
 <div class="section" id="subjects">
 <h2>Subjects<a class="headerlink" href="#subjects" title="Permalink to this heading">¶</a></h2>
@@ -274,7 +270,7 @@ subject’s segments to generate a new audio file.</p>
 <div class="section" id="metrics">
 <h3>Metrics<a class="headerlink" href="#metrics" title="Permalink to this heading">¶</a></h3>
 <p>Acoustic features: Based on the literature as well as our previous work
-on the characterization of CHR subjects <a class="footnote-reference brackets" href="#id16" id="id1">1</a> <a class="footnote-reference brackets" href="#id17" id="id2">2</a> <a class="footnote-reference brackets" href="#id18" id="id3">3</a> <a class="footnote-reference brackets" href="#id19" id="id4">4</a>, we extracted
+on the characterization of CHR subjects <a class="footnote-reference brackets" href="#id18" id="id1">1</a> <a class="footnote-reference brackets" href="#id19" id="id2">2</a> <a class="footnote-reference brackets" href="#id20" id="id3">3</a> <a class="footnote-reference brackets" href="#id21" id="id4">4</a>, we extracted
 several features that can capture flattened intonation, disturbed flow
 of speech (e.g., voice break), changes in speech rate and other
 characteristics found in studies that characterize speech in
@@ -284,16 +280,16 @@ grouped all the extracted features in 8 categories: pitch variations,
 changes in rhythm, voice stability, spectral characterization, vowel
 space, MFCCs, chroma features, and noise measurements (see Table 2).
 More information about the processing used to compute these features can
-be found here <a class="footnote-reference brackets" href="#id19" id="id5">4</a> <a class="footnote-reference brackets" href="#id20" id="id6">5</a> <a class="footnote-reference brackets" href="#id21" id="id7">6</a>.</p>
+be found here <a class="footnote-reference brackets" href="#id21" id="id5">4</a> <a class="footnote-reference brackets" href="#id22" id="id6">5</a> <a class="footnote-reference brackets" href="#id23" id="id7">6</a>.</p>
 <p>English-based linguistic features: To perform a thorough
 characterization of the content of the subject’s speech, we extracted
 features at the word, sentence, and paragraph level. To do so, we
 prepared the text to be analyzed by tokenizing and lemmatizing it using
-the NLTK library<sup>16</sup>. In addition, we only kept the content words
+the NLTK library <a class="footnote-reference brackets" href="#id24" id="id8">7</a>. In addition, we only kept the content words
 of the text by removing the stop words (e.g., “then”) from our analysis,
 using the provided list from natural language toolkit library in python
-(NLTK) <a class="footnote-reference brackets" href="#id22" id="id8">7</a>.</p>
-<p>At the word level, we used part of speech (PoS) tagging <a class="footnote-reference brackets" href="#id23" id="id9">8</a> to
+(NLTK) <a class="footnote-reference brackets" href="#id24" id="id9">7</a>.</p>
+<p>At the word level, we used part of speech (PoS) tagging <a class="footnote-reference brackets" href="#id25" id="id10">8</a> to
 obtain the normalized frequency (percentage) of different parts of
 speech such as adjectives, verbs, etc. used by the subject during the
 interview (see Table 2). We also quantified content and unique words
@@ -303,8 +299,8 @@ categories: graph-based and speech coherence. For graph-based features,
 each word (previously lemmatized) becomes a graph node while consecutive
 words (two nodes) are connected using edges. From that graphical
 representation of the text, we computed standard mathematical graph
-properties listed in <a class="footnote-reference brackets" href="#id24" id="id10">9</a> and summarized in Table 2. To quantify
-speech coherence, we used the Universal Sentence Encoder <a class="footnote-reference brackets" href="#id25" id="id11">10</a> text
+properties listed in <a class="footnote-reference brackets" href="#id26" id="id11">9</a> and summarized in Table 2. To quantify
+speech coherence, we used the Universal Sentence Encoder <a class="footnote-reference brackets" href="#id27" id="id12">10</a> text
 embedding, an algorithm trained by Google with a deep averaging network
 encoder, that numerically represents each text (word, sentence,
 paragraph) using 512 dimensions. Once each sentence is vectorized,
@@ -319,7 +315,7 @@ the subject by counting the transitions from questions to answers (i.e.,
 number of switches).</p>
 <p>Finally, for the analysis at a paragraph level, the whole content of the
 subject speech was used to perform sentiment analysis using Watson
-Natural Language Understanding API <a class="footnote-reference brackets" href="#id26" id="id12">11</a>. This tool provides the
+Natural Language Understanding API <a class="footnote-reference brackets" href="#id28" id="id13">11</a>. This tool provides the
 following metrics: overall sentiment (positive, negative), as well as
 scores for specific sentiments (i.e., anger, disgust, fear, joy, and
 sadness).</p>
@@ -330,14 +326,14 @@ with the following variations in the text processing. To perform
 tokenization in Mandarin, we need to consider that this language is
 written without spacing. Therefore, we used the Electra base version of
 NLP features trained on the close-source Chinese corpus via HanLP 2.1
-library <a class="footnote-reference brackets" href="#id27" id="id13">12</a>. By using this library, we obtained the tokenized
-words and POS tagging based on the Penn Chinese Treebank (3.0) <a class="footnote-reference brackets" href="#id28" id="id14">13</a>.
+library <a class="footnote-reference brackets" href="#id29" id="id14">12</a>. By using this library, we obtained the tokenized
+words and POS tagging based on the Penn Chinese Treebank (3.0) <a class="footnote-reference brackets" href="#id30" id="id15">13</a>.
 Unlike English, Mandarin does not require lemmatization. Specific to
 Mandarin, POS features included other categories besides the ones
 reported for English, including localizers, associative/possessive, and
 measure words, among others. Also, wh-words are not included among POS
 tags in Mandarin.</p>
-<p>For coherence features, we used Sentence Transformers <a class="footnote-reference brackets" href="#id29" id="id15">14</a> to
+<p>For coherence features, we used Sentence Transformers <a class="footnote-reference brackets" href="#id31" id="id16">14</a> to
 obtain the sentence embedding. The consequent steps are a bit different
 from English. For Q-A coherence, the cosine similarity is computed
 between the question and the first sentence in the answer paragraph. For
@@ -349,7 +345,7 @@ sentences (2:sup:<cite>nd</cite> order), and skipping 2 sentences in between
 <p>For graph-based features, each tokenized word is a node. After these
 pre-processing steps, the feature extraction in Mandarin is equivalent
 to the English one. However, for the sentiment analysis, the used
-library<sup>20</sup> does not provide specific sentiments (e.g., anger)
+library <a class="footnote-reference brackets" href="#id28" id="id17">11</a> does not provide specific sentiments (e.g., anger)
 for Mandarin. Therefore, we also incorporate local sentiment by
 computing overall sentiment score for each answer of the subject and
 summarized these values using 5 descriptors (median, interquartile
@@ -583,13 +579,13 @@ that between predicative-adjective (Mandarin) and adjective (English),
 there is a correlation of r=0.60. Correlations between other features
 are lower (r&lt;0.60) which may indicate that each type of feature is
 capturing different aspects of the interviews’ content.</p>
-<p><a class="reference internal" href="_images/fig1.png"><img alt="fig1" src="_images/fig1.png" style="width: 6.32407in; height: 2.13583in;" /></a></p>
+<p><a class="reference internal" href="_images/fig1.png"><img alt="fig1" src="_images/fig1.png" style="width: 800px;" /></a></p>
 <p>Supplementary Figure 1 Classification performance results. Bars indicate
 the mean performance value and error bars indicates the 95% confidence
 interval across 20 runs. Accuracy and AUC values are shown in the left
 and right side, respectively. Different shades of bars are used to
 indicate the type of feature used in the model.</p>
-<p><a class="reference internal" href="_images/fig2.png"><img alt="fig2" src="_images/fig2.png" style="width: 6.40278in; height: 4.01389in;" /></a></p>
+<p><a class="reference internal" href="_images/fig2.png"><img alt="fig2" src="_images/fig2.png" style="width: 800px;" /></a></p>
 <p>Supplementary Figure 2 Top 5 relevant features of best models for each
 type of feature. Features were selected based on the normalized weight
 of only Linear SVM models. Bars indicate the mean normalized weight
@@ -599,9 +595,10 @@ values are higher for CHR, and negative weights indicate that the
 feature values are higher for HC. a) Results of only using acoustic
 features in the models, b) Results of only using English-based
 linguistic features in the models, and c) Results of only using
-Mandarin-based linguistic features in the models, d) Description of each
-of the features shown in (a)-(c).</p>
-<p><a class="reference internal" href="_images/fig3.png"><img alt="fig3" src="_images/fig3.png" style="width: 6.5in; height: 1.67222in;" /></a></p>
+Mandarin-based linguistic features in the models,</p>
+<p><a class="reference internal" href="_images/table3.png"><img alt="table3" src="_images/table3.png" style="width: 800px;" /></a></p>
+<p>Supplementary Table 3 Description of each of the features shown in Supplementary Figure 2.</p>
+<p><a class="reference internal" href="_images/fig3.png"><img alt="fig3" src="_images/fig3.png" style="width: 800px;" /></a></p>
 <p>Supplementary Figure 3 Comparison between relevant features of
 English-based and Mandarin-based linguistic features. a) Heatmap of the
 correlation between both types of features, b) Comparison between both
@@ -627,7 +624,7 @@ symptoms using Mandarin-based linguistic features did not achieve
 statistical significance, we found that the robust minimum of the second
 order coherence among answers, one of the extracted features, has a
 correlation of r=0.59, p=7E-3 with these symptoms.</p>
-<p><a class="reference internal" href="_images/fig4.png"><img alt="fig4" src="_images/fig4.png" style="width: 6.5in; height: 3.26806in;" /></a></p>
+<p><a class="reference internal" href="_images/fig4.png"><img alt="fig4" src="_images/fig4.png" style="width: 800px;" /></a></p>
 <p>Supplementary Figure 4 Regression results for acoustic features. a)
 Performance of the cross-validated models using 3 different machine
 learning algorithms. b) Relevant features to infer positive symptoms
@@ -638,72 +635,72 @@ model (Linear Regression).</p>
 <div class="section" id="references">
 <h4>References:<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h4>
 <dl class="footnote brackets">
-<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Bernardini, F. <em>et al.</em> Associations of acoustically measured tongue/jaw movements and portion of time
 speaking with negative symptom severity in patients with schizophrenia in Italy and the United States. <em>Psychiatry
 Res.</em> <strong>239</strong>, 253–258 (2016).</p>
 </dd>
-<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>Covington, M. A. <em>et al.</em>
 Phonetic measures of reduced tongue movement correlate with negative
 symptom severity in hospitalized patients with first-episode
 schizophrenia-spectrum disorders. <em>Schizophr. Res.</em> <strong>142</strong>, 93–95
 (2012).</p>
 </dd>
-<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
 <dd><p>Zhang, J., Pan Z., Gui, C., Zhu, J. &amp; Cui, D. Clinical
 investigation of speech signal features among patients with
 schizophrenia. <em>Shanghai Arch. Psychiatry</em> <strong>28</strong>, 95–102.</p>
 </dd>
-<dt class="label" id="id19"><span class="brackets">4</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>)</span></dt>
+<dt class="label" id="id21"><span class="brackets">4</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>)</span></dt>
 <dd><p>Agurto, C.
 <em>et al.</em> Analyzing acoustic and prosodic fluctuations in free speech to
 predict psychosis onset in high-risk youths. in <em>2020 42nd Annual
 International Conference of the IEEE Engineering in Medicine &amp; Biology
 Society (EMBC)</em> 5575–5579 (IEEE, 2020).</p>
 </dd>
-<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id6">5</a></span></dt>
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id6">5</a></span></dt>
 <dd><p>Praat Vocal Toolkit: Cut
 pauses. <a class="reference external" href="http://www.praatvocaltoolkit.com/cut-pauses.html">http://www.praatvocaltoolkit.com/cut-pauses.html</a>.</p>
 </dd>
-<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id7">6</a></span></dt>
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id7">6</a></span></dt>
 <dd><p>Giannakopoulos, T. pyAudioAnalysis: An Open-Source Python Library for
 Audio Signal Analysis. <em>PLOS ONE</em> <strong>10</strong>, e0144610 (2015).</p>
 </dd>
-<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id8">7</a></span></dt>
+<dt class="label" id="id24"><span class="brackets">7</span><span class="fn-backref">(<a href="#id8">1</a>,<a href="#id9">2</a>)</span></dt>
 <dd><p>NLTK::
 Natural Language Toolkit. <a class="reference external" href="https://www.nltk.org/">https://www.nltk.org/</a>.</p>
 </dd>
-<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id9">8</a></span></dt>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id10">8</a></span></dt>
 <dd><p>Santorini, B.
 Part-of-Speech Tagging Guidelines for the Penn Treebank Project (3rd
 Revision). 37 (1990).</p>
 </dd>
-<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id10">9</a></span></dt>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id11">9</a></span></dt>
 <dd><p>Mota, N. B. <em>et al.</em> Speech graphs provide a
 quantitative measure of thought disorder in psychosis. <em>PloS One</em> <strong>7</strong>,
 e34928 (2012).</p>
 </dd>
-<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id11">10</a></span></dt>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id12">10</a></span></dt>
 <dd><p>Cer, D. <em>et al.</em> Universal Sentence Encoder.
 <em>ArXiv180311175 Cs</em> (2018).</p>
 </dd>
-<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id12">11</a></span></dt>
+<dt class="label" id="id28"><span class="brackets">11</span><span class="fn-backref">(<a href="#id13">1</a>,<a href="#id17">2</a>)</span></dt>
 <dd><p>IBM Watson Natural Language Understanding
 - Features.
 <a class="reference external" href="https://www.ibm.com/cloud/watson-natural-language-understanding/details">https://www.ibm.com/cloud/watson-natural-language-understanding/details</a>
 (2021).</p>
 </dd>
-<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id13">12</a></span></dt>
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id14">12</a></span></dt>
 <dd><p>mtl — HanLP Documentation.
 <a class="reference external" href="https://hanlp.hankcs.com/docs/api/hanlp/pretrained/mtl.html">https://hanlp.hankcs.com/docs/api/hanlp/pretrained/mtl.html</a>.</p>
 </dd>
-<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id14">13</a></span></dt>
+<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id15">13</a></span></dt>
 <dd><p>Xia, F.
 The Part-Of-Speech Tagging Guidelines for the Penn Chinese Treebank
 (3.0). <em>IRCS Tech. Rep. Ser.</em> (2000).</p>
 </dd>
-<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id15">14</a></span></dt>
+<dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id16">14</a></span></dt>
 <dd><p>Pretrained Models —
 Sentence-Transformers documentation.
 <a class="reference external" href="https://www.sbert.net/docs/pretrained_models.html#multi-lingual-models">https://www.sbert.net/docs/pretrained_models.html#multi-lingual-models</a>.</p>

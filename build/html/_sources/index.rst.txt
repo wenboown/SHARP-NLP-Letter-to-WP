@@ -10,11 +10,7 @@
    :caption: Contents:
 
 
-Carla Agurto, Raquel Norel, Bo Wen, Yanyan Wei, Dan Zhang, Zarina
-Bilgrami, Xiaolu His, Tianhong Zhang, Ofer Pasternak, Huijun Li,
-Matcheri Keshavan, Larry J. Seidman, Susan Whitfield-Gabrieli, Martha E.
-Shenton, Margaret A. Niznikiewicz, Jijun Wang, Guillermo Cecchi, Cheryl
-M. Corcoran, William S. stone.
+Carla Agurto, Raquel Norel, Bo Wen, Yanyan Wei, Dan Zhang, Zarina Bilgrami, Xiaolu Hsi, Tianhong Zhang, Ofer Pasternak, Huijun Li, Matcheri Keshavan, Larry J. Seidman, Susan Whitfield-Gabrieli, Martha E. Shenton, Margaret A. Niznikiewicz, Jijun Wang, Guillermo Cecchi, Cheryl M. Corcoran, William S. stone.
 
 In press, World Psychiatry
 
@@ -87,7 +83,7 @@ English-based linguistic features: To perform a thorough
 characterization of the content of the subject’s speech, we extracted
 features at the word, sentence, and paragraph level. To do so, we
 prepared the text to be analyzed by tokenizing and lemmatizing it using
-the NLTK library\ :sup:`16`. In addition, we only kept the content words
+the NLTK library [7]_. In addition, we only kept the content words
 of the text by removing the stop words (e.g., “then”) from our analysis,
 using the provided list from natural language toolkit library in python
 (NLTK) [7]_.
@@ -153,7 +149,7 @@ sentences (2:sup:`nd` order), and skipping 2 sentences in between
 For graph-based features, each tokenized word is a node. After these
 pre-processing steps, the feature extraction in Mandarin is equivalent
 to the English one. However, for the sentiment analysis, the used
-library\ :sup:`20` does not provide specific sentiments (e.g., anger)
+library [11]_ does not provide specific sentiments (e.g., anger)
 for Mandarin. Therefore, we also incorporate local sentiment by
 computing overall sentiment score for each answer of the subject and
 summarized these values using 5 descriptors (median, interquartile
@@ -365,8 +361,11 @@ values are higher for CHR, and negative weights indicate that the
 feature values are higher for HC. a) Results of only using acoustic
 features in the models, b) Results of only using English-based
 linguistic features in the models, and c) Results of only using
-Mandarin-based linguistic features in the models, d) Description of each
-of the features shown in (a)-(c).
+Mandarin-based linguistic features in the models,
+
+|table3|
+
+Supplementary Table 3 Description of each of the features shown in Supplementary Figure 2.
 
 |fig3|
 
@@ -471,14 +470,12 @@ References:
     https://www.sbert.net/docs/pretrained_models.html#multi-lingual-models.
 
 .. |fig1| image:: figs/fig1.png
-   :width: 6.32407in
-   :height: 2.13583in
+   :width: 800
 .. |fig2| image:: figs/fig2.png
-   :width: 6.40278in
-   :height: 4.01389in
+   :width: 800
 .. |fig3| image:: figs/fig3.png
-   :width: 6.5in
-   :height: 1.67222in
+   :width: 800
 .. |fig4| image:: figs/fig4.png
-   :width: 6.5in
-   :height: 3.26806in
+   :width: 800
+.. |table3| image:: figs/table3.png
+    :width: 800
