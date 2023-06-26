@@ -12,7 +12,8 @@
 
 Carla Agurto, Raquel Norel, Bo Wen, Yanyan Wei, Dan Zhang, Zarina Bilgrami, Xiaolu Hsi, Tianhong Zhang, Ofer Pasternak, Huijun Li, Matcheri Keshavan, Larry J. Seidman, Susan Whitfield-Gabrieli, Martha E. Shenton, Margaret A. Niznikiewicz, Jijun Wang, Guillermo Cecchi, Cheryl M. Corcoran, William S. stone.
 
-In press, World Psychiatry
+`World Psychiatry <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9840499/#>`_. 2023 Feb; 22(1): 157–158.
+Published online 2023 Jan 14. doi: `10.1002/wps.21045 <https://doi.org/10.1002%2Fwps.21045>`_
 
 **************
 Subjects
@@ -20,6 +21,8 @@ Subjects
 
 Supplementary Table 1. Demographics and clinical variables of the
 cohorts.
+
+.. tabularcolumns:: |L|L|L|L|L|
 
 +-------------+-------------+-------------+-------------+-------------+
 |             | Category    | CHR         | Healthy     | Statistics  |
@@ -156,6 +159,8 @@ summarized these values using 5 descriptors (median, interquartile
 range, MAD (median absolute deviation), robust minimum and maximum).
 
 Table 2. Summary of the extracted acoustic features for analysis
+
+.. tabularcolumns:: |l|c|p{5cm}|
 
 +-----------------------+-----------------------+-----------------------+
 | Type of Feature       | Category              | List of all features  |
